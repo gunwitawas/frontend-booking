@@ -4,3 +4,21 @@
 .imagebooking{
     height: 200px;
 }
+.nav-item{
+   /* width: 100% ;
+   overflow: hidden; */
+}
+.nav-item :focus{
+    border-bottom: 4px solid red;
+}
+.nav-item :hover{
+    border-bottom: 4px solid red;
+}
+.navbar-nav{
+    width: 100%;
+    text-align: center;
+
+}
+.navbar {
+    padding: 0px;
+}

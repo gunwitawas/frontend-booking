@@ -1,0 +1,11 @@
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top imagebooking" src="{{ hotel.imageUrl }}" alt="Card image cap" >
+            <div class="card-body">
+              <h5 class="card-title">{{ hotel.name }}</h5>
+              <p class="card-text">{{ hotel.description }}</p>
+              <a style="float:right" class="btn btn-primary">จองที่พัก</a>
+              <!-- <button class="material-icons" style="margin-left : 10px" (click)="onStarClick()">favorite</button> -->
+              <a style="float:left" class="btn btn-primary material-icons" (click)="onStarClick(hotel)">favorite</a>
+        
+            </div>
+          </div>

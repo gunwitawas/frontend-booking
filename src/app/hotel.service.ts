@@ -1,22 +1,12 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Hotel } from './hotel';
-import { WishListService } from './wish-list.service';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class AppComponent {
+export class HotelService {
 
-  // @Output() listhotel = new EventEmitter();
-  constructor(private wishListService : WishListService){
-
-  }
-
-
-
-  title = 'booking';
+  constructor() { }
+  
   hotels = [
     {
       name : "โรงแรม",
@@ -31,13 +21,8 @@ export class AppComponent {
       description : " อยู่ในบริเวณที่ดีสำหรับการทานอาหารนอกที่พักที่พักนี้อยู่ห่างจากชายหาด/ริมน้ำโดยเดิน 11 นาที",
       imageUrl : "https://q-ak.bstatic.com/images/hotel/max1024x768/133/133467452.jpg"
     }
-  ]
-  
-  wishList: Set<Hotel> = new Set();
 
+  ]
 
   
 }
-
-
-

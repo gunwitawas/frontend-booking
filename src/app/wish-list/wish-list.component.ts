@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hotel } from '../hotel';
+import { WishListService } from '../wish-list.service';
 
 @Component({
   selector: 'app-wish-list',
@@ -10,9 +11,20 @@ export class WishListComponent implements OnInit {
 
   @Input() wishList: Hotel[];
 
-  constructor() { }
+  constructor(
+    private wishListService: WishListService
+  ) { }
 
   ngOnInit() {
   }
+  removeList (hotel1 : Hotel){
+   
+    this.wishListService.wishList.delete(hotel1);
+    // this.wishListService.wishList.add(this.hotel2);
+    console.dir(this.wishListService.wishList);
+  }
 
+  change(){
+    alert ('hello');
+  }
 }

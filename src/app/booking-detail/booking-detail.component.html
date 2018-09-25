@@ -1,0 +1,27 @@
+<form [formGroup]="bookingGroupControl">
+  <div>
+    <div class="input-group mb-4 box">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Name </span>
+        </div>
+        <input class="box" type="text" name="name" formControlName="nameControl">
+      </div>
+
+      <div class="input-group mb-4 box">
+          <div class="input-group-prepend">
+            <span class="input-group-text " id="basic-addon1">Email </span>
+          </div>
+          <input class="box" type="email" name="email" formControlName="emailControl">
+        </div>
+
+        <div class="input-group mb-4 box">
+            <div class="input-group-prepend">
+              <span class="input-group-text " id="basic-addon1">Tel </span>
+            </div>
+            <input class="box" type="text" name="tel" formControlName="telControl">
+          </div><br>
+          <span *ngIf="bookingGroupControl.get('emailControl').invalid || bookingGroupControl.get('telControl'.invalid)">กรุณากรอก</span>
+
+          <button (click)="submit()" type="submit" [disabled]="bookingGroupControl.invalid" class="btn btn-dark">submit</button>
+</div>
+        </form>
